@@ -16,6 +16,7 @@ const SlidePage = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [imageDirection, setImageDirection] = useState<string>('normal');
   const swiperRef = useRef<SwiperType | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handlePaginationClick = (index: number) => {
     if (swiperRef.current) swiperRef.current.slideTo(index);
@@ -48,10 +49,11 @@ const SlidePage = () => {
 
   useEffect(() => {
     if (imageDirection !== 'normal') {
-      const timer = setTimeout(() => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+
+      timerRef.current = setTimeout(() => {
         setImageDirection('normal');
       }, 3000);
-      return () => clearTimeout(timer);
     }
   }, [imageDirection]);
 
