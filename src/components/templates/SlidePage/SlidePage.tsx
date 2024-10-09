@@ -21,6 +21,7 @@ const SlidePage = () => {
   const handlePaginationClick = (index: number) => {
     if (swiperRef.current) swiperRef.current.slideTo(index);
     if (index < activeIndex) setImageDirection('reverse');
+      else setImageDirection('normal');
     setActiveIndex(index);
   };
 
