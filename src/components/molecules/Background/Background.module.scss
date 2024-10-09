@@ -5,20 +5,25 @@
 
   .homeSlide {
     height: calc(100% - 187px);  
-  }
-}
-.trackWrap {
-  position: relative;
-  width: 100%;
-  height: 187px;
-  background-image: url("/src/assets/images/track.png");
 
-  .startLine {
-    position: absolute;
-    top: 0;
-    left: 180px;
+    &.gradient {
+      background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(10,105,184,1) 0%, rgba(10,105,184,0) 39%);
+    }
+  }
+
+  .trackWrap {
+    position: relative;
     width: 100%;
-    height: 100%;
-    background: url("/src/assets/images/start_line.png") no-repeat;
+    height: 187px;
+    background-image: url("/src/assets/images/track.png");
+
+    .startLine {
+      position: absolute;
+      top: 0;
+      left: 180px;
+      width: 100%;
+      height: 100%;
+      background: url("/src/assets/images/start_line.png") no-repeat;
+    }
   }
 }
