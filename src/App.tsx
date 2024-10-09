@@ -1,4 +1,4 @@
-import SlidePage from './components/organisms/SlidePage/SlidePage';
+import SlidePage from './components/templates/SlidePage/SlidePage';
 import Loading from './components/templates/Loading/Loading';
 
 function App() {
