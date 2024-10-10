@@ -1,0 +1,10 @@
+.eunjee {
+  z-index: 1;
+  position: absolute;
+  bottom: 180px;
+  left: 60px;
+
+  &.reverse {
+    transform: scaleX(-1);
+  }
+}

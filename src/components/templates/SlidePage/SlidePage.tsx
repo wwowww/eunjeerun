@@ -1,27 +1,34 @@
+// SlidePage.tsx
 import { useEffect, useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from 'swiper'; 
-import Home from '../Home/Home';
-import About from '../About/About';
-import Skills from '../Skills/Skills';
-import Portfolio from '../Portfolio/Portfolio';
-import Goal from '../Goal/Goal';
-
+import { Swiper as SwiperType } from 'swiper';
+import useModal from '../../../hooks/useModal';
+import SlideContent from '../../organisms/SlideContent/SlideContent';
+import Pagination from '../../organisms/Pagination/Pagination';
+import Modal from '../../atoms/Modal/Modal';
+import ModalContent from '../../organisms/ModalContent/ModalContent';
+import Runner from '../../atoms/Runner/Runner';
+import style from './SlidePage.module.scss';
 import 'swiper/css';
-import style from "./SlidePage.module.scss";
 
 const SlidePage = () => {
-  const slides = [<Home />, <About />, <Skills />, <Portfolio />, <Goal />];
-  const paginationList = ["START", "ABOUT", "SKILLS", "PORTFOLIO", "GOAL"];
+  const { isOpen, openModal, closeModal } = useModal();
+  const [modalContentType, setModalContentType] = useState<string>('');
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [imageDirection, setImageDirection] = useState<string>('normal');
   const swiperRef = useRef<SwiperType | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const openContentModal = (contentType: string) => {
+    setModalContentType(contentType);
+    openModal();
+  };
+
+  const paginationList = ["START", "ABOUT", "SKILLS", "PORTFOLIO", "GOAL"];
+
   const handlePaginationClick = (index: number) => {
     if (swiperRef.current) swiperRef.current.slideTo(index);
     if (index < activeIndex) setImageDirection('reverse');
-      else setImageDirection('normal');
+    else setImageDirection('normal');
     setActiveIndex(index);
   };
 
@@ -58,44 +65,28 @@ const SlidePage = () => {
     }
   }, [imageDirection]);
 
-  const progressBarWidth = (activeIndex / (slides.length - 1)) * 100;
+  const progressBarWidth = (activeIndex / (paginationList.length - 1)) * 100;
 
   return (
     <div className={style.wrap}>
-      <Swiper
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        spaceBetween={0}
-        slidesPerView={1}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-        initialSlide={activeIndex}
-        allowTouchMove={false}
-        className={style.slide}
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
-        ))}
-      </Swiper>
-      <img src={"/src/assets/images/run/eunjee-run.gif"} alt="Runner eunjee."
-        className={`${style.eunjee} ${imageDirection === 'reverse' ? style.reverse : ''}`} 
+      <SlideContent
+        setActiveIndex={setActiveIndex}
+        openContentModal={openContentModal}
+        swiperRef={swiperRef}
+        activeIndex={activeIndex}
       />
-      <div className={style.pagination}>
-        <ul>
-          {paginationList.map((list, index) => (
-            <li
-              key={index + "pagination key"}
-              className={`${activeIndex === index ? style.active : ""}`}
-              onClick={() => handlePaginationClick(index)}
-            >
-              {list}
-            </li>
-          ))}
-        </ul>
-        <div className={style.progressBar}>
-          <div className={style.gauge} style={{ width: `${progressBarWidth}%` }} />
-        </div>
-      </div>
+      <Runner imageDirection={imageDirection} />
+      <Pagination
+        activeIndex={activeIndex}
+        handlePaginationClick={handlePaginationClick}
+        paginationList={paginationList}
+        progressBarWidth={progressBarWidth}
+      />
+      <Modal isOpen={isOpen} onClose={closeModal} title="Information">
+        <ModalContent contentType={modalContentType} />
+      </Modal>
     </div>
-  )
-}
+  );
+};
 
 export default SlidePage;

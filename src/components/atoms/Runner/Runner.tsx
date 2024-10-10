@@ -1,22 +1,18 @@
-import { useEffect, useState } from "react";
+import style from "./Runner.module.scss"
 
-type Props = {
-  speed?: number;
+interface RunnerProps {
+  imageDirection: string;
 }
 
-const Runner = ({speed = 100}: Props) => {
-  const [count, setCount] = useState(1);
-
-  useEffect(() => {
-    const number = setInterval(() => {
-      (count < 10) ? setCount(count + 1) : setCount(1)
-    }, speed);
-
-    return () => clearInterval(number);
-  });
+const Runner = ({ imageDirection }: RunnerProps) => {
+  
 
   return (
-    <img src={"src/assets/images/run/run_" + count + ".gif"} alt="Runner eunjee." />
+    <img
+      src={"/src/assets/images/run/eunjee-run.gif"}
+      alt="Runner eunjee"
+      className={`${style.eunjee} ${imageDirection === 'reverse' ? style.reverse : ''}`}
+    />
   ) 
 };
   
