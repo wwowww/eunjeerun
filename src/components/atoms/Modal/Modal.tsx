@@ -8,14 +8,15 @@ interface ModalProps {
   title?: string;
   children: ReactNode;
   bottomCloseButton?: boolean;
+  size?: "normal" | "full";
 }
 
-const Modal = ({ isOpen, onClose, title, children, bottomCloseButton=false }: ModalProps) => {
+const Modal = ({ isOpen, onClose, title, children, bottomCloseButton=false, size="normal" }: ModalProps) => {
   const modalClass = `${style.modal} ${isOpen ? style.open : style.close}`;
 
   return (
     <div className={modalClass} onClick={onClose}>
-      <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
+      <div className={`${style.modalContent} ${size === "full" ? style.full : style.normal}`} onClick={(e) => e.stopPropagation()}>
         {title && (
           <div className={style.header}>
             <h2 className={style.modalTitle}>{title}</h2>
