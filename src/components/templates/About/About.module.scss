@@ -1,0 +1,44 @@
+.about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 152px;
+  background-image: url(/src/assets/images/blcok.png);
+  background-size: contain;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -44px;
+    width: 70px;
+    height: 50px;
+    background-image: url(/src/assets/images/cat.png);
+  }
+
+  .button {
+    position: relative;
+    cursor: pointer;
+    margin-left: 20%;
+    width: 300px;
+    height: 110px;
+    background: url(/src/assets/images/eunjee_photo.png) 100% no-repeat;
+    border: none;
+    transition: ease-in 0.3s;
+    
+    &:hover {
+      background-image: url(/src/assets/images/eunjee_photo_hover.png);
+    }
+
+    strong {
+      position: absolute;  
+      top: -88px;
+      left: 0;
+      width: 100%;
+    }
+  }
+}
