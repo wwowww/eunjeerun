@@ -1,5 +1,5 @@
 // SlidePage.tsx
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Swiper as SwiperType } from 'swiper';
 import useModal from '../../../hooks/useModal';
 import SlideContent from '../../organisms/SlideContent/SlideContent';
@@ -73,6 +73,13 @@ const SlidePage = () => {
     }
   }, [imageDirection]);
 
+  const sizeType = useMemo(() => {
+    if (["about", "skills", "portfolio"].includes(modalContentType)) {
+      return 'full';
+    }
+    return 'normal'; 
+  }, [modalContentType])
+
   const progressBarWidth = (activeIndex / (paginationList.length - 1)) * 100;
 
   return (
@@ -90,7 +97,13 @@ const SlidePage = () => {
         paginationList={paginationList}
         progressBarWidth={progressBarWidth}
       />
-      <Modal isOpen={isOpen} onClose={closeModal} title={titles[modalContentType] || 'Information'} bottomCloseButton={modalContentType === "home"}>
+      <Modal 
+        isOpen={isOpen}
+        onClose={closeModal}
+        title={titles[modalContentType] || 'Information'}
+        bottomCloseButton={modalContentType === "home"}
+        size={sizeType}
+      >
         <ModalContent contentType={modalContentType} />
       </Modal>
     </div>
