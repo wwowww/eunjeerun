@@ -1,17 +1,17 @@
 import { ReactNode } from 'react';
-import style from './Modal.module.scss';
 import { range } from 'lodash';
+import style from './Modal.module.scss';
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
   children: ReactNode;
+  bottomCloseButton?: boolean;
 }
 
-const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
+const Modal = ({ isOpen, onClose, title, children, bottomCloseButton=false }: ModalProps) => {
   const modalClass = `${style.modal} ${isOpen ? style.open : style.close}`;
-  // if (!isOpen) return null;
 
   return (
     <div className={modalClass} onClick={onClose}>
@@ -21,12 +21,18 @@ const Modal = ({ isOpen, onClose, title, children }: ModalProps) => {
             <h2 className={style.modalTitle}>{title}</h2>
             <ul className={style.button}>
               {range(0, 3)?.map((i: number) => (
-                <li key={i + "list key"}  onClick={i === 2 ? onClose : undefined}></li>
+                <li key={i + "list key"} onClick={i === 2 ? onClose : undefined}></li>
               ))}
             </ul>
           </div>
         )}
-        <div className={style.modalBody}>{children}</div>
+        <div className={`${style.modalBody} ${!bottomCloseButton ? '' : style.hasBottomCloseButton}`}>{children}</div>
+        {bottomCloseButton && (
+          <div className={style.buttonWrap}>
+            <button onClick={onClose}>OK</button>
+            <button onClick={onClose}>Cancel</button>
+          </div>
+        )}
       </div>
     </div>
   );

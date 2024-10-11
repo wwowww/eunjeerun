@@ -90,7 +90,7 @@ const SlidePage = () => {
         paginationList={paginationList}
         progressBarWidth={progressBarWidth}
       />
-      <Modal isOpen={isOpen} onClose={closeModal} title={titles[modalContentType] || 'Information'}>
+      <Modal isOpen={isOpen} onClose={closeModal} title={titles[modalContentType] || 'Information'} bottomCloseButton={modalContentType === "home"}>
         <ModalContent contentType={modalContentType} />
       </Modal>
     </div>
