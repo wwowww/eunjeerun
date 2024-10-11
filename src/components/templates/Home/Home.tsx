@@ -1,6 +1,7 @@
 import { range } from 'lodash';
 import Background from '../../molecules/Background/Background';
 import style from "./Home.module.scss";
+import PixelTitle from '../../atoms/PixelTitle/PixelTitle';
 
 type HomeProps = {
   openModal: () => void;
@@ -18,7 +19,7 @@ const Home = ({openModal}: HomeProps) => {
         ))}
       </ul>
       <div className={style.modal}>
-        <strong className={style.title}>Start</strong>
+        <PixelTitle>Start</PixelTitle>
         <button onClick={openModal} className={style.openModalButton}>
           <img src="/src/assets/images/startman.gif" alt="" className={style.startMan} />
           <img src="/src/assets/images/click.png" alt="" className={style.speechBubble} />

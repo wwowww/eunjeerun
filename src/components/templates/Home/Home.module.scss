@@ -88,14 +88,6 @@
   z-index: 10;
   left: calc(50% + 100px);
 
-  .title {
-    color: #fff;
-    font-size: 4rem;
-    font-weight: 500;
-    font-family: "VT323", monospace;
-    text-shadow: -4px 0 #000, 0 4px #000, 4px 0 #000, 0 -4px #000;
-  }
-
   .openModalButton {
     cursor: pointer;
     display: flex;
