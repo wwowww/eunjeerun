@@ -18,7 +18,7 @@ const Home = ({openModal}: HomeProps) => {
         ))}
       </ul>
       <div className={style.modal}>
-        <em>Start</em>
+        <strong className={style.title}>Start</strong>
         <button onClick={openModal} className={style.openModalButton}>
           <img src="/src/assets/images/startman.gif" alt="" className={style.startMan} />
           <img src="/src/assets/images/click.png" alt="" className={style.speechBubble} />
