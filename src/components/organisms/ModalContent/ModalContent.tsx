@@ -1,13 +1,14 @@
 import { ReactNode } from "react";
+import HomeModalContent from "../HomeModalContent/HomeModalContent";
 
 type ModalContentProps = {
   contentType: ReactNode;
 }
 
-const ModalContent =({ contentType }: ModalContentProps) => {
+const ModalContent = ({ contentType }: ModalContentProps) => {
   switch (contentType) {
     case 'home':
-      return <p>Home modal</p>;
+      return <HomeModalContent />;
     case 'about':
       return <p>About modal</p>;
     case 'skills':

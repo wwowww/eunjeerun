@@ -2,8 +2,9 @@
   width: 100%;
   height: 100%;
   background-color: #589cdc;
-
+  
   .homeSlide {
+    position: relative;
     height: calc(100% - 187px);  
 
     &.gradient {

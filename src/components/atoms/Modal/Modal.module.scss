@@ -1,4 +1,5 @@
-.modal{
+$box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,21 +28,90 @@
 }
 
 .modalContent {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  max-width: 640px;
+  max-height: 280px;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #c0c0c0;
+  box-shadow: $box-shadow;
 }
 
-.modalTitle {
-  margin: 0 0 10px 0;
-}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  color: #fff;
+  font-weight: 300;
+  background: linear-gradient(90deg, #000b7c, #377cc6);
 
-.modalBody {
-  margin-bottom: 20px;
-}
+  .modalTitle {
+    font-size: 12px;
+    font-weight: 300;
+  }
 
-.closeButton {
-  cursor: pointer;
+  .button {
+    display: flex;
+    gap: 12px;
+    margin-right: 2px;
+
+    li {
+      cursor: pointer;
+      position: relative;
+      background: #c0c0c0;
+      width: 1rem;
+      height: 1rem;
+      line-height: 1rem;
+      box-shadow: $box-shadow;
+
+      &::before {
+        position: absolute;
+        content: '';
+        background: black;
+      }
+
+      &:nth-child(1)::before {
+        bottom: 3px;
+        left: 4px;
+        width: 7px;
+        height: 3px;
+      }
+      &:nth-child(2) {
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          width: 0.3rem;
+          height: 0.25rem;
+          border: 2px solid black;
+          border-top: 3px solid black;
+          background: #c0c0c0;
+        }
+
+        &::before {
+          top: 1px;
+          left: 5px;
+          z-index: 1;
+        }
+
+        &::after {
+          top: 5px;
+          left: 1px;
+          z-index: 2;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          content: "x";
+          left: 2px;
+          bottom: 2px;
+          color: #000;
+          font-size: 18px;
+          font-weight: 800;
+          background: #c0c0c0;
+        }
+      }
+    }
+  }
 }
