@@ -18,6 +18,14 @@ const SlidePage = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const titles: { [key: string]: string } = {
+    home: 'Start',
+    about: 'About',
+    skills: 'Skills',
+    portfolio: 'Portfolio',
+    goal: 'Goal',
+  };
+
   const openContentModal = (contentType: string) => {
     setModalContentType(contentType);
     openModal();
@@ -82,7 +90,7 @@ const SlidePage = () => {
         paginationList={paginationList}
         progressBarWidth={progressBarWidth}
       />
-      <Modal isOpen={isOpen} onClose={closeModal} title="Information">
+      <Modal isOpen={isOpen} onClose={closeModal} title={titles[modalContentType] || 'Information'}>
         <ModalContent contentType={modalContentType} />
       </Modal>
     </div>
