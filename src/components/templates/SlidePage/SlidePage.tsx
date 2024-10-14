@@ -74,7 +74,7 @@ const SlidePage = () => {
   }, [imageDirection]);
 
   const sizeType = useMemo(() => {
-    if (["about", "skills", "portfolio"].includes(modalContentType)) {
+    if (["about", "portfolio"].includes(modalContentType)) {
       return 'full';
     }
     return 'normal'; 
