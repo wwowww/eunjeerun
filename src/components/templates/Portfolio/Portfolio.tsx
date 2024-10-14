@@ -1,3 +1,4 @@
+import PixelTitle from "../../atoms/PixelTitle/PixelTitle";
 import Background from "../../molecules/Background/Background";
 import style from "./Portfolio.module.scss";
 
@@ -7,9 +8,12 @@ type PortfolioProps = {
 
 const Portfolio = ({openModal}: PortfolioProps) => {
   return (
-    <Background>
+    <Background hasGradient>
       <div className={style.modal}>
-        <button onClick={openModal}>Open Modal</button>
+      <PixelTitle>Portfolio</PixelTitle>
+        <button onClick={openModal} className={style.button}>
+          <img src="/src/assets/images/brick.png" alt="" />
+        </button>
       </div>
     </Background>
   )
