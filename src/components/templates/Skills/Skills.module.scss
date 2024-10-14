@@ -1,0 +1,37 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.openModalButton {
+  position: relative;
+  
+  img {
+    display: block;
+    width: 127px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .speechBubble {
+    position: absolute;
+    top: 12px;
+    right: -80px;
+    max-width: 71px;
+    max-height: 36px;
+    animation: fade 1s linear infinite;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}

@@ -1,3 +1,4 @@
+import PixelTitle from "../../atoms/PixelTitle/PixelTitle";
 import Background from "../../molecules/Background/Background";
 import style from "./Skills.module.scss";
 
@@ -7,9 +8,13 @@ type SkillsProps = {
 
 const Skills = ({openModal}: SkillsProps) => {
   return (
-    <Background>
+    <Background hasGradient>
       <div className={style.modal}>
-        <button onClick={openModal}>Open Modal</button>
+        <PixelTitle>Skills</PixelTitle>
+        <button onClick={openModal} className={style.openModalButton}>
+          <img src="/src/assets/images/book.png" alt="" />
+          <img src="/src/assets/images/click.png" alt="" className={style.speechBubble} />
+        </button>
       </div>
     </Background>
   )
