@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import HomeModalContent from "../HomeModalContent/HomeModalContent";
 import AboutModalContent from "../AboutModalContent/AboutModalContent";
+import SkillsModalContent from "../SkillsModalContent/SkillsModalContent";
 
 type ModalContentProps = {
   contentType: ReactNode;
@@ -13,7 +14,7 @@ const ModalContent = ({ contentType }: ModalContentProps) => {
     case 'about':
       return <AboutModalContent />;
     case 'skills':
-      return <p>Skills modal</p>;
+      return <SkillsModalContent />;
     case 'portfolio':
       return <p>Portfolio modal</p>;
     case 'goal':
