@@ -1,0 +1,113 @@
+.modal {
+  z-index: 1;
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+
+  > strong {
+    margin-bottom: 100px;
+    width: 228px;
+    text-align: center;
+  }
+
+  button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .listWrap {
+    display: flex;
+
+    li {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .listWrap li {
+      animation: 0.5s linear infinite;
+
+      &:first-child {
+        animation-name: i;
+      }
+
+      &:nth-child(2) {
+        animation-name: luv;
+      }
+
+      &:nth-child(3) {
+        animation-name: e;
+      }
+
+      &:last-child {
+        animation-name: j;
+      }
+    }
+  }
+}
+
+@keyframes i {
+  0% {
+      margin-top: -20px;
+  }
+
+  50% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: -20px;
+  }
+}
+
+@keyframes luv {
+  0% {
+    margin-left: 0px;
+  }
+
+  80% {
+    margin-left: 5px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes e {
+  0% {
+    margin-top: -15px;
+  }
+
+  50% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: -15px;
+  }
+}
+
+@keyframes j {
+  0% {
+    margin-left: 0px;
+  }
+
+  10% {
+    margin-left: 3px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
