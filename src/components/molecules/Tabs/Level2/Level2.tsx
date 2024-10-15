@@ -8,13 +8,27 @@ const Level2 = () => {
       <SkillBook title="Level 2" description="Frontend Skills" filter="#ff3a3a" imageFilter="sepia(90%)" />
       <div className={style.boxWrap}>
         <SkillBox
-          frame="Typescript" frameColor="#3178C6" title="Typescript" description="description" 
+          frame="Typescript" frameColor="#4b84f8" title="Typescript" description="description" 
         />
         <SkillBox
-          frame="Typescript" frameColor="#3178C6" title="제목" description="description" 
+          frame="React" frameColor="#b4cdff" title="React" description="description"
+          fontSize={22} fontColor="#000" shadowSize={0.2}
         />
         <SkillBox
-          frame="Typescript" frameColor="#3178C6" title="제목" description="description" 
+          frame="NextJS" frameColor="#8f9ebc" title="NextJS" description="description"
+          fontSize={19} fontColor="#fff" shadowSize={0.2}
+        />
+        <SkillBox
+          frame="Vue" frameColor="#9effc1" title="Vue" description="description"
+          fontSize={24} fontColor="#000" shadowSize={0.2}
+        />
+        <SkillBox
+          frame="SCSS" frameColor="#f6c1fe" title="SCSS" description="description" 
+          fontSize={24} fontColor="#000" shadowSize={0.2}
+        />
+        <SkillBox
+          frame="Git" frameColor="#fedbc1" title="Git" description="description" 
+          fontSize={24} fontColor="#000" shadowSize={0.2}
         />
       </div>
       <div className={style.skillPoint}>
