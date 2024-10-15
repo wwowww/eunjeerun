@@ -5,7 +5,7 @@ import style from "../Level2/Level2.module.scss";
 const Level1 = () => {
   return (
     <div className={style.wrap}>
-      <SkillBook title="Level 1" description="Beginner Skills" filter="#4763ff" />
+      <SkillBook title="Level 1" description="Beginner Skills" filter="#4763ff" imageFilter="grayscale(100%)" />
       <div className={style.boxWrap}>
         <SkillBox
           image="/src/assets/images/html.png" title="HTML" description="description" 
