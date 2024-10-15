@@ -1,4 +1,3 @@
-// Pagination.tsx
 import style from './Pagination.module.scss';
 
 type PaginationProps = {

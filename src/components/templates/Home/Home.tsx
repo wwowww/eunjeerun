@@ -7,7 +7,7 @@ type HomeProps = {
   openModal: () => void;
 }
 
-const Home = ({openModal}: HomeProps) => {
+const Home = ({ openModal }: HomeProps) => {
   const totalClouds = 6;
 
   return (

@@ -1,4 +1,3 @@
-// SlidePage.tsx
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Swiper as SwiperType } from 'swiper';
 import useModal from '../../../hooks/useModal';

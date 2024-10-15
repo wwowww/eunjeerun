@@ -1,4 +1,3 @@
-// SlideContent.tsx
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
 import Home from '../../templates/Home/Home';
