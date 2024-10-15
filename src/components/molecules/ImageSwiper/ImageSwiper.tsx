@@ -6,10 +6,13 @@ import style from "./ImageSwiper.module.scss";
 type ImageSwiperProps = {
   onSwiperRef: any;
   controlSwiper: any;
-  images: string[];
+  info: {
+    image: string;
+    link: string;
+  }[];
 }
 
-const ImageSwiper = ({ onSwiperRef, controlSwiper, images }: ImageSwiperProps) => {
+const ImageSwiper = ({ onSwiperRef, controlSwiper, info }: ImageSwiperProps) => {
   return (
     <Swiper
       onSwiper={(swiper) => {
@@ -19,11 +22,14 @@ const ImageSwiper = ({ onSwiperRef, controlSwiper, images }: ImageSwiperProps) =
       slidesPerView={1}
       loop={true}
       modules={[Controller]}
+      allowTouchMove={false}
       className={style.imageSwiper}
     >
-      {images.map((item, index) => (
-        <SwiperSlide key={index + "key"}>
-          <img src={`/src/assets/images/${item}`} alt="" />
+      {info.map((item, index) => (
+        <SwiperSlide key={index} className={style.imageSlide}>
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            <img src={`/src/assets/images/portfolio/${item.image}`} alt="" />
+          </a>
         </SwiperSlide>
       ))}
     </Swiper>
