@@ -16,7 +16,7 @@
   
     span {
       font-size: 14px;
-      font-family: "VT323", monospace;
+      font-family: "VT", monospace;
       z-index: 1;
       position: relative;
     }
@@ -32,7 +32,7 @@
   .description {
     width: calc(100% - 60px);
     color:#666;
-    font-family: "VT323", monospace;
+    font-family: "VT", monospace;
     font-size: 18px;
   }
 }

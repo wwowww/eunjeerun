@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'VT';
+  src: local('VT'),
+        url('/src/static/fonts/VT323-Regular.woff2') format('woff2'),
+        url('/src/static/fonts/VT323-Regular.woff') format('woff'),
+        url('/src/static/fonts/VT323-Regular.ttf') format('truetype'),
+        url("/src/static/fonts/VT323-Regular.otf") format("opentype"),
+        url("/src/static/fonts/VT323-Regular.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
