@@ -21,8 +21,8 @@ const Home = ({ openModal }: HomeProps) => {
       <div className={style.modal}>
         <PixelTitle>Start</PixelTitle>
         <button onClick={openModal} className={style.openModalButton}>
-          <img src="/src/static/images/startman.gif" alt="" className={style.startMan} />
-          <img src="/src/static/images/click.png" alt="" className={style.speechBubble} />
+          <img src="/public/images/startman.gif" alt="" className={style.startMan} />
+          <img src="/public/images/click.png" alt="" className={style.speechBubble} />
         </button>
       </div>
     </Background>

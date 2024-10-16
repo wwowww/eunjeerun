@@ -13,9 +13,9 @@ const GoalModalContent = () => {
         <p>앞으로도 페이지 속 캐릭터처럼 꿈을 향해 끝없이 달리는 제가 되겠습니다!!</p>
         <p>감사합니다!</p>
         <div className={style.imageWrap}>
-          <img src="/src/static/images/run/eunjee-run.gif" alt="" className={style.runner} />
+          <img src="/public/images/run/eunjee-run.gif" alt="" className={style.runner} />
           <div className={style.portal}>
-            <img src="/src/static/images/portal.webp" alt="" className={style.portal} />
+            <img src="/public/images/portal.webp" alt="" className={style.portal} />
           </div>
         </div>
       </div>

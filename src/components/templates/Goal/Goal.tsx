@@ -17,16 +17,16 @@ const Goal = ({openModal}: GoalProps) => {
         <button onClick={openModal}>
           <ul className={style.listWrap}>
             <li>
-              <img src="/src/static/images/i.png" alt="" />
+              <img src="/public/images/i.png" alt="" />
             </li>
             <li>
-              <img src="/src/static/images/luv.png" alt="" />
+              <img src="/public/images/luv.png" alt="" />
             </li>
             <li>
-              <img src="/src/static/images/e.png" alt="" />
+              <img src="/public/images/e.png" alt="" />
             </li>
             <li>
-              <img src="/src/static/images/j.png" alt="" />
+              <img src="/public/images/j.png" alt="" />
             </li>
           </ul>
         </button>

@@ -9,7 +9,7 @@ const Runner = ({ imageDirection }: RunnerProps) => {
 
   return (
     <img
-      src={"/src/static/images/run/eunjee-run.gif"}
+      src={"/public/images/run/eunjee-run.gif"}
       alt="Runner eunjee"
       className={`${style.eunjee} ${imageDirection === 'reverse' ? style.reverse : ''}`}
     />

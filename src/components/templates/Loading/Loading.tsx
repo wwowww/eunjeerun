@@ -34,7 +34,7 @@ const Loading = () => {
             </ul>
           </div>
           <div className={style.contents}>
-            <img src="/src/static/images/window-loading.gif" alt="" />
+            <img src="/public/images/window-loading.gif" alt="" />
             <TypingText text="Please wait for a moment..." frame={100} />
             <ul className={style.installBar}>
               {range(0, totalBars)?.map((i: number) => (

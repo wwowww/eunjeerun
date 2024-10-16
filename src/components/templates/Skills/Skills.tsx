@@ -12,8 +12,8 @@ const Skills = ({openModal}: SkillsProps) => {
       <div className={style.modal}>
         <PixelTitle>Skills</PixelTitle>
         <button onClick={openModal} className={style.openModalButton}>
-          <img src="/src/static/images/book.png" alt="" />
-          <img src="/src/static/images/click.png" alt="" className={style.speechBubble} />
+          <img src="/public/images/book.png" alt="" />
+          <img src="/public/images/click.png" alt="" className={style.speechBubble} />
         </button>
       </div>
     </Background>
