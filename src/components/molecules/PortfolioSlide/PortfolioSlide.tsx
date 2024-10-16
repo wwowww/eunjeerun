@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Controller } from 'swiper/modules';
 import ImageSwiper from "../ImageSwiper/ImageSwiper";
-import {imageSlideInfo, textSlideInfo} from "../../../mocks/info";
+import {imageSlideInfo, textSlideInfo} from "../../../static/mocks/info";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import style from "./PortfolioSlide.module.scss";
@@ -30,8 +30,8 @@ const PortfolioSlide = () => {
       <div className={style.wrap}>
         <div className={style.grid}>
           <div className={style.icon}>
-            <img src="/src/assets/images/eunjee_front.png" alt="" />
-            <img src="/src/assets/images/about_arrow.png" alt="" />
+            <img src="/src/static/images/eunjee_front.png" alt="" />
+            <img src="/src/static/images/about_arrow.png" alt="" />
           </div>
           <Swiper
             onSwiper={(swiper) => {

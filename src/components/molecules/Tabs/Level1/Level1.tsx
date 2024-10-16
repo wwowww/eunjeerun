@@ -8,16 +8,16 @@ const Level1 = () => {
       <SkillBook title="Level 1" description="Beginner Skills" filter="#4763ff" imageFilter="grayscale(100%)" />
       <div className={style.boxWrap}>
         <SkillBox
-          image="/src/assets/images/html.png" title="HTML" description="description" 
+          image="/src/static/images/html.png" title="HTML" description="description" 
         />
         <SkillBox
-          image="/src/assets/images/css.png" title="CSS" description="description" 
+          image="/src/static/images/css.png" title="CSS" description="description" 
         />
         <SkillBox
-          image="/src/assets/images/js.png" title="Javascript/JQuery" description="description" 
+          image="/src/static/images/js.png" title="Javascript/JQuery" description="description" 
         />
         <SkillBox
-          image="/src/assets/images/psai.png" title="Photoshop/illustrator" description="description" 
+          image="/src/static/images/psai.png" title="Photoshop/illustrator" description="description" 
         />
       </div>
       <div className={style.skillPoint}>

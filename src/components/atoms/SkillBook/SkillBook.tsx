@@ -12,7 +12,7 @@ const SkillBook = ({ title, description, filter, imageFilter }: SkillBookProps) 
     <div className={style.wrap}>
       <div className={style.skillBook} style={{filter: `drop-shadow(-1px 1px 9px ${filter})`}}>
         <span>{title}</span>
-        <img src="/src/assets/images/cover.png" alt="" style={{filter: `${imageFilter}`}} />
+        <img src="/src/static/images/cover.png" alt="" style={{filter: `${imageFilter}`}} />
       </div>
       <p className={style.description}>{description}</p>
     </div>

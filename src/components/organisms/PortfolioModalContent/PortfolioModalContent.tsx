@@ -8,7 +8,7 @@ const PortfolioModalContent = () => {
       <div className={style.screen}>
         <GaugeImage />
         <div className={style.centerImage}>
-          <img src="/src/assets/images/notebook.png" alt="" />
+          <img src="/src/static/images/notebook.png" alt="" />
         </div>
       </div>
       <div className={style.slide}>

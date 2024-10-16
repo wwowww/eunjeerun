@@ -19,8 +19,8 @@ const AboutSlide = () => {
     <div className={style.wrap}>
       <div className={style.grid}>
         <div className={style.icon}>
-          <img src="/src/assets/images/eunjee_front.png" alt="" />
-          <img src="/src/assets/images/about_arrow.png" alt="" />
+          <img src="/src/static/images/eunjee_front.png" alt="" />
+          <img src="/src/static/images/about_arrow.png" alt="" />
         </div>
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
