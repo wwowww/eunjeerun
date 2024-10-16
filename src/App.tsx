@@ -4,7 +4,7 @@ import Loading from './components/templates/Loading/Loading';
 function App() {
   return (
     <>
-      {/* <Loading /> */}
+      <Loading />
       <SlidePage /> 
     </>
   )
