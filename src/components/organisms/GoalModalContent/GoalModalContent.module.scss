@@ -19,7 +19,7 @@
       height: 100px;
     }
 
-    img {
+    .runner {
       z-index: 1;
       position: absolute;
       bottom: 0;
@@ -30,13 +30,14 @@
     }
 
     .portal {
-      position: absolute;
-      right: -48px;
-      bottom: -22px;
-
       z-index: 0;
-      iframe {
-        width: 190px;
+      position: absolute;
+      right: -8px;
+      bottom: -8px;
+
+      .portal {
+        display: block;
+        width: 130px;
         height: auto;
         pointer-events : none;
       }

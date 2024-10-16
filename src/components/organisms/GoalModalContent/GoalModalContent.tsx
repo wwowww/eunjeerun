@@ -13,9 +13,9 @@ const GoalModalContent = () => {
         <p>앞으로도 페이지 속 캐릭터처럼 꿈을 향해 끝없이 달리는 제가 되겠습니다!!</p>
         <p>감사합니다!</p>
         <div className={style.imageWrap}>
-          <img src="/src/assets/images/run/eunjee-run.gif" alt="" />
+          <img src="/src/assets/images/run/eunjee-run.gif" alt="" className={style.runner} />
           <div className={style.portal}>
-            <iframe src="https://giphy.com/embed/CTJfRJVWhE2ji4RAKR" width="352" height="480" frameBorder="0" allowFullScreen></iframe>
+            <img src="/src/assets/images/portal.webp" alt="" className={style.portal} />
           </div>
         </div>
       </div>
