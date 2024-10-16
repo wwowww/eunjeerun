@@ -12,7 +12,7 @@ const Portfolio = ({openModal}: PortfolioProps) => {
       <div className={style.modal}>
       <PixelTitle>Portfolio</PixelTitle>
         <button onClick={openModal} className={style.button}>
-          <img src="/public/images/brick.png" alt="" />
+          <img src="/images/brick.png" alt="" />
         </button>
       </div>
     </Background>

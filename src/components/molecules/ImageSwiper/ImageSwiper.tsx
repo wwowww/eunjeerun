@@ -28,7 +28,7 @@ const ImageSwiper = ({ onSwiperRef, controlSwiper, info }: ImageSwiperProps) => 
       {info.map((item, index) => (
         <SwiperSlide key={index} className={style.imageSlide}>
           <a href={item.link} target="_blank" rel="noopener noreferrer">
-            <img src={`/public/images/portfolio/${item.image}`} alt="" />
+            <img src={`/images/portfolio/${item.image}`} alt="" />
           </a>
         </SwiperSlide>
       ))}
