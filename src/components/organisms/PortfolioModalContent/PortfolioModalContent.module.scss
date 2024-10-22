@@ -13,8 +13,12 @@
   }
 
   .centerImage {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
-    max-width: 364px;
+    width: 364px;
     img {
       width: 100%;
     }
