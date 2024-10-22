@@ -63,7 +63,7 @@ const AboutSlide = () => {
               <h3>What can i do?</h3>
               <ul>
                 <li>Vue2에서 Vue3 + Nuxt로, React17에서 React18로 버전 업그레이드하며 마이그레이션한 경험이 있습니다.</li>
-                <li>각각 관리되던 프로젝트들을 Turborepo를 Pnpm과 사용하여 다양한 프로젝트들을 한 번에 관리할 수 있게한 경험이 있습니다.</li>
+                <li>따로 관리되던 프로젝트들을 Turborepo와 pnpm을 사용하여 다양한 프로젝트들을 한 번에 관리할 수 있게한 경험이 있습니다.</li>
                 <li>nuxt/i18n, next-i18을 활용해 다국어 처리해본 경험이 있습니다.</li>
                 <li>Lighthouse, http2, gzip을 통해 최적화하고 빌드 속도, 페이지 속도를 개선한 경험이 있습니다. <a href="https://www.notion.so/kwoneunjee/Lighthouse-http2-gzip-437a5015263049bfa4f86f3ef80d0689?pvs=4" target='_blank'>정리 링크</a></li>
                 <li>Javascript, Typescript, React, NextJS, SCSS를 사용하여 편하게 코딩할 수 있습니다.</li>
