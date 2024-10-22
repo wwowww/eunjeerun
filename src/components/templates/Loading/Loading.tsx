@@ -10,13 +10,13 @@ const Loading = () => {
 
   setTimeout(() => {
     setIsShow(false)
-  }, 5000);
+  }, 3600);
 
   useEffect(() => {
     if (activeBars < totalBars) {
       const timer = setTimeout(() => {
         setActiveBars((prev) => prev + 1);
-      }, 150);
+      }, 80);
       return () => clearTimeout(timer);
     }
   }, [activeBars]);
@@ -35,7 +35,7 @@ const Loading = () => {
           </div>
           <div className={style.contents}>
             <img src="/images/window-loading.gif" alt="" />
-            <TypingText text="Please wait for a moment..." frame={100} />
+            <TypingText text="Please wait for a moment..." frame={90} />
             <ul className={style.installBar}>
               {range(0, totalBars)?.map((i: number) => (
                 <li key={i + "bar key"} className={i < activeBars ? style.active : ''}></li>
