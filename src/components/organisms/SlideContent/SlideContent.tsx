@@ -32,7 +32,7 @@ const SlideContent: React.FC<SlideContentProps> = ({ setActiveIndex, openContent
       initialSlide={activeIndex}
       allowTouchMove={false}
       className={style.slide}
-      speed={1600}
+      speed={500}
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
