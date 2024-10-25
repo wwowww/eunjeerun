@@ -26,6 +26,10 @@ export const textSlideInfo = [
         description: "Web Speech Todo App은 음성 인식 기능을 갖춘 할 일 관리 애플리케이션입니다. Web Speetch를 활용해 음성으로 검색 기능과 여러 상태관리 라이브러리를 활용해 각각 LocalStorage에 저장되도록 기능 구현했습니다."
       },
       {
+        subTitle: "프로젝트 기술서 링크",
+        description: "https://kwoneunjee.notion.site/Toy-project-Web-speech-Todo-App-128b6a7ed2da80059bc6e644873d29c6"
+      },
+      {
         subTitle: "화면 링크",
         description: "https://todo-app-chi-beryl-53.vercel.app/"
       },
