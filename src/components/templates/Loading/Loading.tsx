@@ -6,11 +6,6 @@ import style from "./Loading.module.scss";
 const Loading = () => {
   const totalBars = 25;
   const [activeBars, setActiveBars] = useState<number>(0); 
-  const [isShow, setIsShow] = useState<boolean>(true);
-
-  setTimeout(() => {
-    setIsShow(false)
-  }, 3600);
 
   useEffect(() => {
     if (activeBars < totalBars) {
@@ -22,30 +17,29 @@ const Loading = () => {
   }, [activeBars]);
 
   return (
-    isShow && (
-      <div className={style.wrap}>
-        <div className={style.window}>
-          <div className={style.header}>
-            <label>Eunjee Run Update</label>
-            <ul className={style.button}>
-            {range(0, 3)?.map((i: number) => (
-              <li key={i + "list key"}></li>
+    <div className={style.wrap}>
+      <div className={style.window}>
+        <div className={style.header}>
+          <label>Eunjee Run Update</label>
+          <ul className={style.button}>
+          {range(0, 3)?.map((i: number) => (
+            <li key={i + "list key"}></li>
+          ))}
+          </ul>
+        </div>
+        <div className={style.contents}>
+          <img src="/images/window-loading.gif" alt="" />
+          <TypingText text="Please wait for a moment..." frame={90} />
+          <ul className={style.installBar}>
+            {range(0, totalBars)?.map((i: number) => (
+              <li key={i + "bar key"} className={i < activeBars ? style.active : ''}></li>
             ))}
-            </ul>
-          </div>
-          <div className={style.contents}>
-            <img src="/images/window-loading.gif" alt="" />
-            <TypingText text="Please wait for a moment..." frame={90} />
-            <ul className={style.installBar}>
-              {range(0, totalBars)?.map((i: number) => (
-                <li key={i + "bar key"} className={i < activeBars ? style.active : ''}></li>
-              ))}
-            </ul>
-          </div>
+          </ul>
         </div>
       </div>
-    )
+    </div>
   )
 }
+
 
 export default Loading;

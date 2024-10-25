@@ -1,10 +1,20 @@
+import { useState, useEffect } from 'react';
 import SlidePage from './components/templates/SlidePage/SlidePage';
 import Loading from './components/templates/Loading/Loading';
 
 function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3600);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+
   return (
     <>
-      <Loading />
+      {isLoading && <Loading />}
       <SlidePage /> 
     </>
   )
