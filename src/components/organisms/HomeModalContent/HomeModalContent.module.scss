@@ -19,5 +19,22 @@
 .description {
   position: relative;
   padding: 20px 16px;
+
+  p {
+    line-height: 1.5;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  .textBackground,
+  .textUnderline {
+    background-color: #ffdc9b;
+  }
+
+  .textUnderline {
+    font-weight: 600;
+  }
 }
 

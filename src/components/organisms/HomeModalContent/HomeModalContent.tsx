@@ -21,10 +21,10 @@ const HomeModalContent = () => {
         </p>
         <p>
           2019년에 JQuery를 사용해 만든 프로젝트를
-          2024년에는 Pnpm, React, Vite를 사용해 업그레이드 하였습니다! <br />
+          2024년에는 <b className={style.textBackground}>React, Typescript, Pnpm, Vite</b>를 사용해 업그레이드 하였습니다! <br />
         </p>
         <p>
-          키보드 방향키와 하단 페이지네이션으로
+          키보드 <b className={style.textUnderline}>좌우 방향키와 하단 페이지네이션</b>으로
           이동이 가능한 웹 페이지입니다.  <br/><br/>
         </p>
         <p>
