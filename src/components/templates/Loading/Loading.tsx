@@ -5,7 +5,7 @@ import style from "./Loading.module.scss";
 
 const Loading = () => {
   const totalBars = 25;
-  const [activeBars, setActiveBars] = useState<number>(0); 
+  const [activeBars, setActiveBars] = useState<number>(0);
 
   useEffect(() => {
     if (activeBars < totalBars) {
@@ -22,13 +22,13 @@ const Loading = () => {
         <div className={style.header}>
           <label>Eunjee Run Update</label>
           <ul className={style.button}>
-          {range(0, 3)?.map((i: number) => (
-            <li key={i + "list key"}></li>
-          ))}
+            {range(0, 3)?.map((i: number) => (
+              <li key={i + "list key"}></li>
+            ))}
           </ul>
         </div>
         <div className={style.contents}>
-          <img src="/images/window-loading.gif" alt="" />
+          <img src="/images/window-loading.webp" alt="" />
           <TypingText text="Please wait for a moment..." frame={90} />
           <ul className={style.installBar}>
             {range(0, totalBars)?.map((i: number) => (

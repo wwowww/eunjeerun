@@ -21,8 +21,8 @@ const Home = ({ openModal }: HomeProps) => {
       <div className={style.modal}>
         <PixelTitle>Start</PixelTitle>
         <button onClick={openModal} className={style.openModalButton} aria-label="소개글 Modal 열기">
-          <img src="/images/startman.gif" alt="" className={style.startMan} />
-          <img src="/images/click.png" alt="" className={style.speechBubble} />
+          <img src="/images/startman.webp" alt="" className={style.startMan} />
+          <img src="/images/click.webp" alt="" className={style.speechBubble} />
         </button>
       </div>
     </Background>

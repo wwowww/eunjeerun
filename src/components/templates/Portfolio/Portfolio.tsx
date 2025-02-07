@@ -12,7 +12,7 @@ const Portfolio = ({ openModal }: PortfolioProps) => {
       <div className={style.modal}>
         <PixelTitle>Portfolio</PixelTitle>
         <button onClick={openModal} className={style.button} aria-label="포트폴리오 설명 Modal 열기">
-          <img src="/images/brick.png" alt="" />
+          <img src="/images/brick.webp" alt="" />
         </button>
       </div>
     </Background>

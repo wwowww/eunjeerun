@@ -11,22 +11,22 @@ type SkillBoxProps = {
   shadowSize?: number;
 }
 
-const SkillBox = ({ frame, frameColor, image, title, description, fontColor="#fff", fontSize, shadowSize=1 }: SkillBoxProps) => {
+const SkillBox = ({ frame, frameColor, image, title, description, fontColor = "#fff", fontSize, shadowSize = 1 }: SkillBoxProps) => {
   return (
     <div className={style.wrap}>
       {!image ? (
         <div className={style.frame}>
-          <span className={style.name} 
+          <span className={style.name}
             style={{
-              color: fontColor, 
+              color: fontColor,
               fontSize: fontSize || 18,
               textShadow: shadowSize ? `-${shadowSize}px 0 #000, 0 ${shadowSize}px #000, ${shadowSize}px 0 #000, 0 -${shadowSize}px #000` : "none"
             }}>
             {frame}
           </span>
-          <img src="/images/skill_frame.png" alt={frame} style={{backgroundColor: frameColor}} />
+          <img src="/images/skill_frame.webp" alt={frame} style={{ backgroundColor: frameColor }} />
         </div>
-      ): (
+      ) : (
         <img src={image} alt="" />
       )}
       <div className={style.contents}>

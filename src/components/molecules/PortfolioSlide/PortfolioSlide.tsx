@@ -19,19 +19,19 @@ const PortfolioSlide = () => {
   const handleNext = () => {
     if (swiperRef.current) swiperRef.current.slideNext();
   };
-  
+
   return (
     <>
-      <ImageSwiper 
-        onSwiperRef={imageSwiperRef} 
-        controlSwiper={swiperRef.current} 
-        info={imageSlideInfo} 
+      <ImageSwiper
+        onSwiperRef={imageSwiperRef}
+        controlSwiper={swiperRef.current}
+        info={imageSlideInfo}
       />
       <div className={style.wrap}>
         <div className={style.grid}>
           <div className={style.icon}>
-            <img src="/images/eunjee_front.png" alt="" />
-            <img src="/images/about_arrow.png" alt="" />
+            <img src="/images/eunjee_front.webp" alt="" />
+            <img src="/images/about_arrow.webp" alt="" />
           </div>
           <Swiper
             onSwiper={(swiper) => {
@@ -43,7 +43,7 @@ const PortfolioSlide = () => {
             loop={true}
             modules={[EffectFade, Controller]}
             className={style.mySwiper}
-            onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex + 1)} 
+            onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex + 1)}
           >
             {textSlideInfo.map((info, index) => (
               <SwiperSlide className={style.slide} key={index + "slide info key"}>
