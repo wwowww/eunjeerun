@@ -1,5 +1,5 @@
-import PixelTitle from "../../atoms/PixelTitle/PixelTitle";
-import Background from "../../molecules/Background/Background";
+import PixelTitle from "@/components/atoms/PixelTitle/PixelTitle";
+import Background from "@/components/molecules/Background/Background";
 import style from "./Portfolio.module.scss";
 
 type PortfolioProps = {

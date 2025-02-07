@@ -1,7 +1,7 @@
 import { range } from 'lodash';
-import Background from '../../molecules/Background/Background';
+import Background from '@/components/molecules/Background/Background';
 import style from "./Home.module.scss";
-import PixelTitle from '../../atoms/PixelTitle/PixelTitle';
+import PixelTitle from '@/components/atoms/PixelTitle/PixelTitle';
 
 type HomeProps = {
   openModal: () => void;

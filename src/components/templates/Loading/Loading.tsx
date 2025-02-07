@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { range } from 'lodash';
-import TypingText from "../../atoms/TypingText/TypingText";
+import TypingText from "@/components/atoms/TypingText/TypingText";
 import style from "./Loading.module.scss";
 
 const Loading = () => {

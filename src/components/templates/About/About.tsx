@@ -1,5 +1,5 @@
-import PixelTitle from "../../atoms/PixelTitle/PixelTitle";
-import Background from "../../molecules/Background/Background";
+import PixelTitle from "@/components/atoms/PixelTitle/PixelTitle";
+import Background from "@/components/molecules/Background/Background";
 import style from "./About.module.scss";
 
 
@@ -7,7 +7,7 @@ type AboutProps = {
   openModal: () => void;
 }
 
-const About = ({openModal}: AboutProps) => {
+const About = ({ openModal }: AboutProps) => {
   return (
     <Background>
       <div className={style.about}>

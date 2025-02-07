@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
-import HomeModalContent from "../HomeModalContent/HomeModalContent";
-import AboutModalContent from "../AboutModalContent/AboutModalContent";
-import SkillsModalContent from "../SkillsModalContent/SkillsModalContent";
-import PortfolioModalContent from "../PortfolioModalContent/PortfolioModalContent";
-import GoalModalContent from "../GoalModalContent/GoalModalContent";
+import HomeModalContent from "@/components/organisms/HomeModalContent/HomeModalContent";
+import AboutModalContent from "@/components/organisms/AboutModalContent/AboutModalContent";
+import SkillsModalContent from "@/components/organisms/SkillsModalContent/SkillsModalContent";
+import PortfolioModalContent from "@/components/organisms/PortfolioModalContent/PortfolioModalContent";
+import GoalModalContent from "@/components/organisms/GoalModalContent/GoalModalContent";
 
 type ModalContentProps = {
   contentType: ReactNode;

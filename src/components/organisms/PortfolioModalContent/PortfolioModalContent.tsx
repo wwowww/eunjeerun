@@ -1,5 +1,5 @@
-import GaugeImage from "../../atoms/GaugeImage/GaugeImage";
-import PortfolioSlide from "../../molecules/PortfolioSlide/PortfolioSlide";
+import GaugeImage from "@/components/atoms/GaugeImage/GaugeImage";
+import PortfolioSlide from "@/components/molecules/PortfolioSlide/PortfolioSlide";
 import style from "./PortfolioModalContent.module.scss";
 
 const PortfolioModalContent = () => {

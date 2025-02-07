@@ -1,6 +1,6 @@
 
-import GaugeImage from '../../atoms/GaugeImage/GaugeImage';
-import AboutSlide from '../../molecules/AboutSlide/AboutSlide';
+import GaugeImage from '@/components/atoms/GaugeImage/GaugeImage';
+import AboutSlide from '@/components/molecules/AboutSlide/AboutSlide';
 import style from "./AboutModalContent.module.scss";
 
 const AboutModalContent = () => {

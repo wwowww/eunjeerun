@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
-import Home from '../../templates/Home/Home';
-import About from '../../templates/About/About';
-import Skills from '../../templates/Skills/Skills';
-import Portfolio from '../../templates/Portfolio/Portfolio';
-import Goal from '../../templates/Goal/Goal';
+import Home from '@/components/templates/Home/Home';
+import About from '@/components/templates/About/About';
+import Skills from '@/components/templates/Skills/Skills';
+import Portfolio from '@/components/templates/Portfolio/Portfolio';
+import Goal from '@/components/templates/Goal/Goal';
 import style from './SlideContent.module.scss';
 
 interface SlideContentProps {

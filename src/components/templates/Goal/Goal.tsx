@@ -1,6 +1,6 @@
-import PixelTitle from "../../atoms/PixelTitle/PixelTitle";
-import Background from "../../molecules/Background/Background";
-import ConfettiHoverEffect from "../../molecules/ConfettiHoverEffect/ConfettiHoverEffect";
+import PixelTitle from "@/components/atoms/PixelTitle/PixelTitle";
+import Background from "@/components/molecules/Background/Background";
+import ConfettiHoverEffect from "@/components/molecules/ConfettiHoverEffect/ConfettiHoverEffect";
 import style from "./Goal.module.scss";
 
 

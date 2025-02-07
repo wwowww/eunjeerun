@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Controller } from 'swiper/modules';
-import ImageSwiper from "../ImageSwiper/ImageSwiper";
-import { imageSlideInfo, textSlideInfo } from "../../../mocks/info";
+import ImageSwiper from "@/components/molecules/ImageSwiper/ImageSwiper";
+import { imageSlideInfo, textSlideInfo } from "@/mocks/info";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import style from "./PortfolioSlide.module.scss";

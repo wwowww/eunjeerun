@@ -1,4 +1,4 @@
-import OptionBar from "../../atoms/optionBar/optionBar";
+import OptionBar from "@/components/atoms/optionBar/optionBar";
 import style from "./GoalModalContent.module.scss";
 
 const GoalModalContent = () => {

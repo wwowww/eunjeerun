@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Swiper as SwiperType } from 'swiper';
-import useModal from '../../../hooks/useModal';
-import SlideContent from '../../organisms/SlideContent/SlideContent';
-import Pagination from '../../organisms/Pagination/Pagination';
-import Modal from '../../atoms/Modal/Modal';
-import ModalContent from '../../organisms/ModalContent/ModalContent';
-import Runner from '../../atoms/Runner/Runner';
+import useModal from '@/hooks/useModal';
+import SlideContent from '@/components/organisms/SlideContent/SlideContent';
+import Pagination from '@/components/organisms/Pagination/Pagination';
+import Modal from '@/components/atoms/Modal/Modal';
+import ModalContent from '@/components/organisms/ModalContent/ModalContent';
+import Runner from '@/components/atoms/Runner/Runner';
 import style from './SlidePage.module.scss';
 import 'swiper/css';
 
@@ -76,7 +76,7 @@ const SlidePage = () => {
     if (["about", "portfolio"].includes(modalContentType)) {
       return 'full';
     }
-    return 'normal'; 
+    return 'normal';
   }, [modalContentType])
 
   const progressBarWidth = (activeIndex / (paginationList.length - 1)) * 100;
@@ -96,7 +96,7 @@ const SlidePage = () => {
         paginationList={paginationList}
         progressBarWidth={progressBarWidth}
       />
-      <Modal 
+      <Modal
         isOpen={isOpen}
         onClose={closeModal}
         title={titles[modalContentType] || 'Information'}

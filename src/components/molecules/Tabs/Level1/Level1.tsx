@@ -1,6 +1,6 @@
-import SkillBook from "../../../atoms/SkillBook/SkillBook";
-import SkillBox from "../../../atoms/SkillBox/SkillBox";
-import style from "../Level2/Level2.module.scss";
+import SkillBook from "@/components/atoms/SkillBook/SkillBook";
+import SkillBox from "@/components/atoms/SkillBox/SkillBox";
+import style from "@/components/molecules/Tabs/Level2/Level2.module.scss";
 
 const Level1 = () => {
   return (
