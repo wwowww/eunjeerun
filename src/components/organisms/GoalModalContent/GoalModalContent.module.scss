@@ -3,7 +3,7 @@
     overflow-y: scroll;
     margin: 20px;
     padding: 10px;
-    height: 310px;
+    height: 100%;
     max-height: 100%;
     background: #fff;
     border: 2px inset;
@@ -39,7 +39,7 @@
         display: block;
         width: 130px;
         height: auto;
-        pointer-events : none;
+        pointer-events: none;
       }
     }
   }
@@ -50,7 +50,7 @@
     align-items: center;
     gap: 10px;
     margin: 0 20px;
-    
+
     a {
       display: flex;
       align-items: center;
@@ -72,7 +72,7 @@
         content: "+";
         z-index: 1;
         position: absolute;
-        color: #ffeb6e;    
+        color: #ffeb6e;
         width: 10px;
         height: 10px;
         animation: twinkling 0.6s linear infinite;
@@ -116,7 +116,7 @@
   0% {
     color: #ffeb6e;
   }
-  
+
   50% {
     color: transparent;
   }
@@ -157,5 +157,11 @@
         animation-duration: 4s;
       }
     }
+  }
+}
+
+@media screen and (min-width: 476px) {
+  .wrap .conent {
+    height: 310px;
   }
 }

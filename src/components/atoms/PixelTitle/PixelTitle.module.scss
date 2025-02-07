@@ -1,7 +1,13 @@
 .title {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
   font-family: "VT", monospace;
   filter: drop-shadow(2px 4px 6px #589cdc);
+}
+
+@media screen and (min-width: 476px) {
+  .title {
+    font-size: 4rem;
+  }
 }

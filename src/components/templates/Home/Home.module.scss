@@ -68,7 +68,7 @@
         margin-top: 30px;
         width: 200px;
         height: 100px;
-        background-image: url("/images/cloud_2.png"); 
+        background-image: url("/images/cloud_2.png");
 
         &::after {
           top: 4px;
@@ -86,14 +86,14 @@
   position: absolute;
   bottom: 0;
   z-index: 10;
-  left: calc(50% + 100px);
+  left: calc(10% + 100px);
 
   .openModalButton {
     display: flex;
     flex-direction: row;
 
     img {
-      display: block; 
+      display: block;
 
       &.speechBubble {
         animation: fade 1s linear infinite;
@@ -113,23 +113,31 @@
 
 @media screen and (max-width: 1024px) {
   .itemWrap li {
-    &.cloud_1 {display: none;}
-    &.cloud_2 {margin-left: 100px;}
-  
+    &.cloud_1 {
+      display: none;
+    }
+    &.cloud_2 {
+      margin-left: 100px;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .itemWrap li {
-    &.cloud_2 {display: none;}
-    &.cloud_3 {margin-left: 200px;}
+    &.cloud_2 {
+      display: none;
+    }
+    &.cloud_3 {
+      margin-left: 200px;
+    }
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .itemWrap li {
-    &.cloud_3 {display: none;}
+    &.cloud_3 {
+      display: none;
+    }
     &.cloud_4 {
       margin-left: 200px;
       min-width: 170px;
@@ -143,6 +151,14 @@
       display: block;
       min-width: 60px;
     }
-    &.cloud_4 {display: none;}
+    &.cloud_4 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 476px) {
+  .modal {
+    left: calc(50% + 100px);
   }
 }

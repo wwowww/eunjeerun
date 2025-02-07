@@ -4,12 +4,13 @@
   justify-content: center;
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: inherit;
+  right: 100px;
 }
 
 .openModalButton {
   position: relative;
-  
+
   img {
     display: block;
     width: 127px;
@@ -33,5 +34,12 @@
   }
   from {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 476px) {
+  .modal {
+    left: 50%;
+    right: inherit;
   }
 }

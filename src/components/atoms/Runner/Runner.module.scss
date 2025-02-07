@@ -1,10 +1,18 @@
 .eunjee {
+  width: 130px;
   z-index: 1;
   position: absolute;
   bottom: 180px;
-  left: 60px;
+  left: 20px;
 
   &.reverse {
     transform: scaleX(-1);
+  }
+}
+
+@media screen and (min-width: 476px) {
+  .eunjee {
+    width: 162px;
+    left: 60px;
   }
 }

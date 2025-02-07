@@ -1,7 +1,8 @@
 .modal {
   position: absolute;
   bottom: 90px;
-  left: 50%;
+  left: inherit;
+  right: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,25 +11,27 @@
   .button {
     img {
       display: block;
-      width: 251px;
-      height: 61px;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 251px;
+      height: auto;
     }
   }
 
   &::after {
+    width: 30px;
+    height: 30px;
     position: absolute;
     margin-top: 80px;
     top: 13px;
     left: -20px;
     transform: rotate(90deg);
     content: "";
-    width: 40px;
-    height: 50px;
+
     background: 100% / contain url(/images/cursor.png) no-repeat;
     animation: cursor 1s linear infinite;
   }
 }
-
 
 @keyframes cursor {
   0% {
@@ -41,5 +44,22 @@
 
   100% {
     left: -60px;
+  }
+}
+
+@media screen and (min-width: 476px) {
+  .modal {
+    right: inherit;
+    left: 50%;
+
+    &::after {
+      width: 40px;
+      height: 50px;
+    }
+
+    .button img {
+      width: 251px;
+      height: 61px;
+    }
   }
 }
