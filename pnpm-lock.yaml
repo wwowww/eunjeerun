@@ -57,6 +57,9 @@ importers:
       globals:
         specifier: ^15.9.0
         version: 15.9.0
+      rollup-plugin-gzip:
+        specifier: ^4.0.1
+        version: 4.0.1(rollup@4.22.0)
       sass-embedded:
         specifier: ^1.79.1
         version: 1.79.1
@@ -966,6 +969,12 @@ packages:
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  rollup-plugin-gzip@4.0.1:
+    resolution: {integrity: sha512-HVukJ5vwTxgzKaNeKCNEqFRQ+/T/j/3zqoUaCN3VGTt8/Mn7Wu2nMCE8VBIDubjM5U+QGgiWs6fYysn63JZY1g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      rollup: '>=2.0.0'
 
   rollup@4.22.0:
     resolution: {integrity: sha512-W21MUIFPZ4+O2Je/EU+GP3iz7PH4pVPUXSbEZdatQnxo29+3rsUjgrJmzuAZU24z7yRAnFN6ukxeAhZh/c7hzg==}
@@ -1999,6 +2008,10 @@ snapshots:
   resolve-from@4.0.0: {}
 
   reusify@1.0.4: {}
+
+  rollup-plugin-gzip@4.0.1(rollup@4.22.0):
+    dependencies:
+      rollup: 4.22.0
 
   rollup@4.22.0:
     dependencies:
