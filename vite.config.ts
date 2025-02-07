@@ -12,17 +12,17 @@ export default defineConfig({
       }
     }
   },
-  // server: {
-  //   headers: {
-  //     'Cache-Control': 'public, max-age=86400',
-  //   },
-  // },
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=86400',
+    },
+  },
   build: {
     rollupOptions: {
       plugins: [gzipPlugin()],
-      output: {
-        assetFileNames: 'assets/[name]-[hash][ext]',
-      },
+      // output: {
+      //   assetFileNames: 'assets/[name]-[hash][ext]',
+      // },
     },
   },
 })
