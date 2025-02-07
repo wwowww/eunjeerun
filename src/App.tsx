@@ -10,12 +10,13 @@ function App() {
       setIsLoading(false);
     }, 3600);
     return () => clearTimeout(timer);
-  }, [isLoading]);
+  }, []);
 
   return (
     <>
+
       {isLoading && <Loading />}
-      <SlidePage /> 
+      <SlidePage />
     </>
   )
 }
