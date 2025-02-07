@@ -8,28 +8,28 @@ type GoalProps = {
   openModal: () => void;
 }
 
-const Goal = ({openModal}: GoalProps) => {
+const Goal = ({ openModal }: GoalProps) => {
   return (
     <Background hasGradient>
       <div className={style.modal}>
-      <PixelTitle>Goal</PixelTitle>
-      <ConfettiHoverEffect>
-        <button onClick={openModal}>
-          <ul className={style.listWrap}>
-            <li>
-              <img src="/images/i.png" alt="" />
-            </li>
-            <li>
-              <img src="/images/luv.png" alt="" />
-            </li>
-            <li>
-              <img src="/images/e.png" alt="" />
-            </li>
-            <li>
-              <img src="/images/j.png" alt="" />
-            </li>
-          </ul>
-        </button>
+        <PixelTitle>Goal</PixelTitle>
+        <ConfettiHoverEffect>
+          <button onClick={openModal} aria-label="포트폴리오 설명, Github 링크, Blog 링크 확인 가능한 Modal 열기">
+            <ul className={style.listWrap}>
+              <li>
+                <img src="/images/i.png" alt="" />
+              </li>
+              <li>
+                <img src="/images/luv.png" alt="" />
+              </li>
+              <li>
+                <img src="/images/e.png" alt="" />
+              </li>
+              <li>
+                <img src="/images/j.png" alt="" />
+              </li>
+            </ul>
+          </button>
         </ConfettiHoverEffect>
       </div>
     </Background>

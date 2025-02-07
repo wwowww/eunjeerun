@@ -20,7 +20,7 @@ const Home = ({ openModal }: HomeProps) => {
       </ul>
       <div className={style.modal}>
         <PixelTitle>Start</PixelTitle>
-        <button onClick={openModal} className={style.openModalButton}>
+        <button onClick={openModal} className={style.openModalButton} aria-label="소개글 Modal 열기">
           <img src="/images/startman.gif" alt="" className={style.startMan} />
           <img src="/images/click.png" alt="" className={style.speechBubble} />
         </button>
