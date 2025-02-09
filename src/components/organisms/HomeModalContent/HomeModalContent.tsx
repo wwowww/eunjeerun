@@ -24,7 +24,7 @@ const HomeModalContent = () => {
           2024년에는 <b className={style.textBackground}>React, Typescript, Pnpm, Vite</b>를 사용해 업그레이드 하였습니다! <br />
         </p>
         <p>
-          하단 페이지네이션과 PC의 경우 <b className={style.textBold}>키보드 좌우 방향키</b>로, Mobile 기기의 경우 <b className={style.textBold}>터치</b>로
+          하단 페이지네이션과 <b className={style.textBackground}>PC의 경우 키보드 좌우 방향키</b>로, <b className={style.textBackground}>Mobile 기기의 경우 터치</b>로
           이동이 가능합니다.  <br /><br />
         </p>
         <p>
