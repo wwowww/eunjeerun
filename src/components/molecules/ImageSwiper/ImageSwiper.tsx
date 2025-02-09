@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Controller } from 'swiper/modules'; 
+import { Controller } from 'swiper/modules';
 import 'swiper/css';
 import style from "./ImageSwiper.module.scss";
 
@@ -28,7 +28,7 @@ const ImageSwiper = ({ onSwiperRef, controlSwiper, info }: ImageSwiperProps) => 
       {info.map((item, index) => (
         <SwiperSlide key={index} className={style.imageSlide}>
           <a href={item.link} target="_blank" rel="noopener noreferrer">
-            <img src={`/images/portfolio/${item.image}`} alt="" />
+            <img src={`/images/portfolio/${item.image}`} alt="" loading="lazy" />
           </a>
         </SwiperSlide>
       ))}

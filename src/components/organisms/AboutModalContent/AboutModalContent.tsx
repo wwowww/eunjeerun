@@ -9,7 +9,7 @@ const AboutModalContent = () => {
       <div className={style.screen}>
         <GaugeImage />
         <div className={style.centerImage}>
-          <img src="/images/about_eunjee_center.webp" alt="" />
+          <img src="/images/about_eunjee_center.webp" alt="" loading="lazy" />
         </div>
       </div>
       <div className={style.slide}>

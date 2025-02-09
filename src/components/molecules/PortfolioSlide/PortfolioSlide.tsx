@@ -30,8 +30,8 @@ const PortfolioSlide = () => {
       <div className={style.wrap}>
         <div className={style.grid}>
           <div className={style.icon}>
-            <img src="/images/eunjee_front.webp" alt="" />
-            <img src="/images/about_arrow.webp" alt="" />
+            <img src="/images/eunjee_front.webp" alt="" loading="lazy" />
+            <img src="/images/about_arrow.webp" alt="" loading="lazy" />
           </div>
           <Swiper
             onSwiper={(swiper) => {

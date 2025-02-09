@@ -24,7 +24,7 @@ const SkillBox = ({ frame, frameColor, image, title, description, fontColor = "#
             }}>
             {frame}
           </span>
-          <img src="/images/skill_frame.webp" alt={frame} style={{ backgroundColor: frameColor }} />
+          <img src="/images/skill_frame.webp" alt={frame} style={{ backgroundColor: frameColor }} loading="lazy" />
         </div>
       ) : (
         <img src={image} alt="" />
