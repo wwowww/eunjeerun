@@ -10,6 +10,8 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     ViteImageOptimizer({
+      includePublic: true,
+      exclude: ['**/images/run/eunjee-run.webp'],
       webp: { quality: 80 },
     }),
   ],
