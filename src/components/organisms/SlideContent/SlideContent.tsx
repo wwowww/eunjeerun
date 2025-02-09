@@ -12,9 +12,11 @@ interface SlideContentProps {
   openContentModal: (contentType: string) => void;
   swiperRef: React.MutableRefObject<SwiperType | null>;
   activeIndex: number;
+  allowTouchMove?: boolean;
+  setImageDirection: (direction: string) => void;
 }
 
-const SlideContent: React.FC<SlideContentProps> = ({ setActiveIndex, openContentModal, swiperRef, activeIndex }) => {
+const SlideContent = ({ setActiveIndex, openContentModal, swiperRef, activeIndex, allowTouchMove, setImageDirection }: SlideContentProps) => {
   const slides = [
     <Home openModal={() => openContentModal('home')} />,
     <About openModal={() => openContentModal('about')} />,
@@ -28,16 +30,21 @@ const SlideContent: React.FC<SlideContentProps> = ({ setActiveIndex, openContent
       onSwiper={(swiper) => (swiperRef.current = swiper)}
       spaceBetween={0}
       slidesPerView={1}
-      onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      onSlideChange={(swiper) => {
+        setImageDirection(swiper.activeIndex < activeIndex ? 'reverse' : 'normal');
+        setActiveIndex(swiper.activeIndex)
+      }}
       initialSlide={activeIndex}
-      allowTouchMove={false}
+      allowTouchMove={allowTouchMove}
       className={style.slide}
       speed={500}
     >
-      {slides.map((slide, index) => (
-        <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
-      ))}
-    </Swiper>
+      {
+        slides.map((slide, index) => (
+          <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
+        ))
+      }
+    </Swiper >
   );
 };
 

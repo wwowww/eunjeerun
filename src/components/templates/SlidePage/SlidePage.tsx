@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Swiper as SwiperType } from 'swiper';
 import useModal from '@/hooks/useModal';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import SlideContent from '@/components/organisms/SlideContent/SlideContent';
 import Pagination from '@/components/organisms/Pagination/Pagination';
 import Modal from '@/components/atoms/Modal/Modal';
@@ -11,6 +12,7 @@ import 'swiper/css';
 
 const SlidePage = () => {
   const { isOpen, openModal, closeModal } = useModal();
+  const isMobile = useIsMobile();
   const [modalContentType, setModalContentType] = useState<string>('');
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [imageDirection, setImageDirection] = useState<string>('normal');
@@ -25,6 +27,13 @@ const SlidePage = () => {
     goal: 'Goal',
   };
 
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.allowTouchMove = isMobile;
+      swiperRef.current.update();
+    }
+  }, [isMobile]);
+
   const openContentModal = (contentType: string) => {
     setModalContentType(contentType);
     openModal();
@@ -34,8 +43,6 @@ const SlidePage = () => {
 
   const handlePaginationClick = (index: number) => {
     if (swiperRef.current) swiperRef.current.slideTo(index);
-    if (index < activeIndex) setImageDirection('reverse');
-    else setImageDirection('normal');
     setActiveIndex(index);
   };
 
@@ -43,11 +50,9 @@ const SlidePage = () => {
     const keyActions: { [key: number]: () => void } = {
       37: () => {
         swiperRef.current?.slidePrev();
-        setImageDirection('reverse');
       },
       39: () => {
         swiperRef.current?.slideNext();
-        setImageDirection('normal');
       },
     };
 
@@ -88,6 +93,8 @@ const SlidePage = () => {
         openContentModal={openContentModal}
         swiperRef={swiperRef}
         activeIndex={activeIndex}
+        allowTouchMove={isMobile}
+        setImageDirection={setImageDirection}
       />
       <Runner imageDirection={imageDirection} />
       <Pagination
