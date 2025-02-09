@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const useModal = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,6 +9,16 @@ const useModal = () => {
     setTimeout(() => {
       setIsOpen(false);
     }, 3000);
+  }, []);
+
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.keyCode === 27) closeModal();
+    };
+
+    document.addEventListener('keydown', handleEscKey);
+
+    return () => document.removeEventListener('keydown', handleEscKey);
   }, []);
 
   return {
