@@ -12,7 +12,7 @@ const SkillBook = ({ title, description, filter, imageFilter }: SkillBookProps) 
     <div className={style.wrap}>
       <div className={style.skillBook} style={{ filter: `drop-shadow(-1px 1px 9px ${filter})` }}>
         <h3>{title}</h3>
-        <img src="/images/cover.webp" alt="" style={{ filter: `${imageFilter}` }} loading="lazy" />
+        <img src="/images/cover.webp" alt="" style={{ filter: `${imageFilter}` }} />
       </div>
       <p className={style.description}>{description}</p>
     </div>
