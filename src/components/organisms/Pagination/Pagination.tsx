@@ -16,6 +16,7 @@ const Pagination = ({ activeIndex, handlePaginationClick, paginationList, progre
             key={index + "pagination key"}
             className={`${activeIndex === index ? style.active : ""}`}
             onClick={() => handlePaginationClick(index)}
+            tabIndex={0}
           >
             {list}
           </li>
