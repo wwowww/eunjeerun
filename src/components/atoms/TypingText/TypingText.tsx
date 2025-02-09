@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-const TypingText = ({text, frame}: any) => {
-    const [title, setTitle] = useState('');
-    const [count, setCount] = useState(0);
-    const completionWord = text;
+const TypingText = ({ text, frame }: any) => {
+  const [title, setTitle] = useState('');
+  const [count, setCount] = useState(0);
+  const completionWord = text;
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -20,7 +20,7 @@ const TypingText = ({text, frame}: any) => {
     return () => clearInterval(typingInterval);
   }, [title]);
 
-  return <span>{title}</span>;
+  return <p>{title}</p>;
 };
 
 export default TypingText;

@@ -9,7 +9,7 @@ type PaginationProps = {
 
 const Pagination = ({ activeIndex, handlePaginationClick, paginationList, progressBarWidth }: PaginationProps) => {
   return (
-    <div className={style.pagination}>
+    <nav className={style.pagination}>
       <ul>
         {paginationList.map((list, index) => (
           <li
@@ -24,7 +24,7 @@ const Pagination = ({ activeIndex, handlePaginationClick, paginationList, progre
       <div className={style.progressBar}>
         <div className={style.gauge} style={{ width: `${progressBarWidth}%` }} />
       </div>
-    </div>
+    </nav>
   );
 };
 

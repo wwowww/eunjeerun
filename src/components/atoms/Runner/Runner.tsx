@@ -8,12 +8,14 @@ const Runner = ({ imageDirection }: RunnerProps) => {
 
 
   return (
-    <img
-      decoding="async"
-      src={"/images/run/eunjee-run.webp"}
-      alt="Runner eunjee"
-      className={`${style.eunjee} ${imageDirection === 'reverse' ? style.reverse : ''}`}
-    />
+    <h1>
+      <img
+        decoding="async"
+        src={"/images/run/eunjee-run.webp"}
+        alt="Runner eunjee"
+        className={`${style.eunjee} ${imageDirection === 'reverse' ? style.reverse : ''}`}
+      />
+    </h1>
   )
 };
 

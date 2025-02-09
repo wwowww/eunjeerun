@@ -7,7 +7,7 @@ type PixelTitleProps = {
 
 const PixelTitle = ({ children }: PixelTitleProps) => {
   return (
-    <strong className={style.title}>{children}</strong>
+    <h2 className={style.title}>{children}</h2>
   )
 }
 
