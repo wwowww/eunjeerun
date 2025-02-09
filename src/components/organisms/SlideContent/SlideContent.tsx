@@ -1,11 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper';
-import Home from '@/components/templates/Home/Home';
-import About from '@/components/templates/About/About';
-import Skills from '@/components/templates/Skills/Skills';
-import Portfolio from '@/components/templates/Portfolio/Portfolio';
-import Goal from '@/components/templates/Goal/Goal';
+import { lazy, Suspense } from 'react';
+import Background from '@components/molecules/Background/Background';
 import style from './SlideContent.module.scss';
+
+const Home = lazy(() => import('@/components/templates/Home/Home'));
+const About = lazy(() => import('@/components/templates/About/About'));
+const Skills = lazy(() => import('@/components/templates/Skills/Skills'));
+const Portfolio = lazy(() => import('@/components/templates/Portfolio/Portfolio'));
+const Goal = lazy(() => import('@/components/templates/Goal/Goal'));
 
 interface SlideContentProps {
   setActiveIndex: (index: number) => void;
@@ -41,10 +44,12 @@ const SlideContent = ({ setActiveIndex, openContentModal, swiperRef, activeIndex
     >
       {
         slides.map((slide, index) => (
-          <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
+          <Suspense fallback={<Background />}>
+            <SwiperSlide key={index + "slide key"}>{slide}</SwiperSlide>
+          </Suspense>
         ))
       }
-    </Swiper >
+    </Swiper>
   );
 };
 
