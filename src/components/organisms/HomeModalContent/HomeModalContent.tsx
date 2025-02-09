@@ -24,8 +24,8 @@ const HomeModalContent = () => {
           2024년에는 <b className={style.textBackground}>React, Typescript, Pnpm, Vite</b>를 사용해 업그레이드 하였습니다! <br />
         </p>
         <p>
-          키보드 <b className={style.textUnderline}>좌우 방향키와 하단 페이지네이션</b>으로
-          이동이 가능한 웹 페이지입니다.  <br /><br />
+          하단 페이지네이션과 PC의 경우 <b className={style.textBold}>키보드 좌우 방향키</b>로, Mobile 기기의 경우 <b className={style.textBold}>터치</b>로
+          이동이 가능합니다.  <br /><br />
         </p>
         <p>
           자, 이제 은지런의 세계로 떠나볼까요?
