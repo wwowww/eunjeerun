@@ -11,7 +11,7 @@ export default defineConfig({
     tsconfigPaths(),
     ViteImageOptimizer({
       webp: { quality: 80 },
-      exclude: ['eunjee-run.webp', 'startman.webp'],
+      exclude: ['eunjee-run.webp', 'startman.webp', 'portal.webp'],
     }),
   ],
   css: {
