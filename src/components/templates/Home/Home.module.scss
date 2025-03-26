@@ -91,9 +91,11 @@
   .openModalButton {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 
     img {
       display: block;
+      object-fit: contain;
 
       &.speechBubble {
         animation: fade 1s linear infinite;
